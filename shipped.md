@@ -8,7 +8,7 @@ Here's a list in reverse chronology of stuff I've done.
 
 ## King (2018-present)
 
-Principal engineer and technical lead on the game technology team for Candy Crush Saga.
+Associate technical director for Candy Crush Saga.
 
 * Ownership of long-term technical stability and operative capabilities of
   the game, responsible evolution of legacy systems, and further development.

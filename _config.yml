@@ -1,8 +1,0 @@
-# Site settings
-title: Tomas Olander
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tomasolander.com" # the base hostname & protocol for your site
-
-# Build settings
-markdown: kramdown
-exclude: ['CNAME', 'LICENSE.txt', 'README.md', 'Gemfile.lock', 'Gemfile']

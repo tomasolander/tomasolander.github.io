@@ -1,10 +1,7 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@charset "utf-8";
-
-$link-color: #28c;
-$text-color: #111;
+:root {
+  --link-color: #28c;
+  --text-color: #111;
+}
 
 html {
   font-size: 100%;
@@ -14,7 +11,7 @@ html {
 }
 
 body {
-  color: $text-color;
+  color: var(--text-color);
   background-color: #fdfdfd;
   padding-top: 0.5rem;
 }
@@ -39,14 +36,14 @@ h1 span {
   color: #666;
 }
 
-$logo-padding: 0.5rem;
-
 h1 a {
+  --logo-padding: 0.5rem;
+
   display: inline-block;
-  padding: ($logo-padding * 0.5) $logo-padding;
-  margin: -($logo-padding * 0.5) -$logo-padding;
-  margin-right: -($logo-padding * 0.5);
-  color: $text-color;
+  padding: calc(var(--logo-padding) * 0.5) var(--logo-padding);
+  margin: calc(var(--logo-padding) * -1.5);
+  margin-right: calc(var(--logo-padding) * -0.5);
+  color: var(--text-color);
 }
 
 h1 a:hover,
@@ -81,7 +78,7 @@ h3 {
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -115,6 +112,9 @@ a:focus {
   border-radius: 5% 30% 20% 40%;
 }
 
+.lead br {
+  display: none;
+}
 
 img {
   width: 100%;
@@ -125,14 +125,41 @@ ul {
   padding-left: 2rem;
 }
 
-.desktop-only {
-  display: none;
+.skills {
+  display: flex;
+  margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 800px) {
-  .desktop-only {
-    display: inherit;
-  }
+.skills strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #555;
+  font-family: "Roboto Slab", serif;
+}
+
+.skills em {
+  display: block;
+  font-style: normal;
+}
+
+.skills__header {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.skills ul {
+  flex: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  display: inline-block;
+  margin: 0 1rem 0.5rem 0;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -142,6 +169,10 @@ ul {
 
   .lead {
     font-size: 1.2rem;
+  }
+
+  .lead br {
+    display: inherit;
   }
 
   ul {

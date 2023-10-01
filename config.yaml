@@ -1,0 +1,18 @@
+baseURL: https://tomasolander.com
+languageCode: en-uk
+title: Tomas Olander
+
+outputs:
+  home:
+    - HTML
+
+disableKinds:
+  - sitemap
+  - taxonomy
+  - term
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true

@@ -1,8 +1,6 @@
 ---
-layout: default
-permalink: /shipped
 title: "Shipped"
---- 
+---
 
 Here's a list in reverse chronology of stuff I've done.
 

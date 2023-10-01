@@ -1,6 +1,4 @@
 ---
-layout: default
-permalink: /skills
 title: "Skills"
 --- 
 
@@ -66,4 +64,3 @@ I'm a full-stack developer with a preference for Python.
 ### Deployment
 * Deployment to AWS, Heroku, bare metal
 * Ansible, Puppet
-

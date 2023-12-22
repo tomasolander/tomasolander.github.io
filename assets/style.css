@@ -1,6 +1,45 @@
 :root {
   --link-color: #28c;
   --text-color: #111;
+  --body-color: #fdfdfd;
+  --heading-color: #111;
+  --heading-hover-background: rgba(128, 192, 255, 0.5);
+  --subheading-color: #666;
+  --marker-background-main: linear-gradient(
+    75deg,
+    rgba(255, 192, 128, 0.55),
+    rgba(255, 192, 128, 0.85),
+    rgba(255, 192, 128, 0.15)
+    );
+  --marker-background-secondary: linear-gradient(
+    75deg,
+    rgba(255, 192, 128, 0.35),
+    rgba(255, 192, 128, 0.85),
+    rgba(255, 192, 128, 0.25)
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #2af;
+    --text-color: #ddd;
+    --body-color: #20202a;
+    --heading-color: #fff;
+    --heading-hover-background: rgba(0, 64, 128, 0.5);
+    --subheading-color: #aaa;
+    --marker-background-main: linear-gradient(
+      75deg,
+      rgba(192, 64, 0, 0.55),
+      rgba(192, 64, 0, 0.85),
+      rgba(192, 64, 0, 0.15)
+      );
+    --marker-background-secondary: linear-gradient(
+      75deg,
+      rgba(192, 64, 0, 0.35),
+      rgba(192, 64, 0, 0.85),
+      rgba(192, 64, 0, 0.25)
+      );
+  }
 }
 
 html {
@@ -12,7 +51,7 @@ html {
 
 body {
   color: var(--text-color);
-  background-color: #fdfdfd;
+  background-color: var(--body-color);
   padding-top: 0.5rem;
 }
 
@@ -33,7 +72,7 @@ h1 {
 }
 
 h1 span {
-  color: #666;
+  color: var(--subheading-color);
 }
 
 h1 a {
@@ -43,18 +82,13 @@ h1 a {
   padding: calc(var(--logo-padding) * 0.5) var(--logo-padding);
   margin: calc(var(--logo-padding) * -1.5);
   margin-right: calc(var(--logo-padding) * -0.5);
-  color: var(--text-color);
+  color: var(--heading-color);
 }
 
 h1 a:hover,
 h1 a:focus {
   text-decoration: none;
-  background-image: linear-gradient(
-    103deg,
-    rgba(128, 192, 255, 0.35),
-    rgba(128, 192, 255, 0.55),
-    rgba(128, 192, 255, 0.15)
-    );
+  background: var(--heading-hover-background);
 }
 
 h2 {
@@ -63,18 +97,13 @@ h2 {
   background-size: auto 0.3rem;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-    75deg,
-    rgba(255, 192, 128, 0.55),
-    rgba(255, 192, 128, 0.85),
-    rgba(255, 192, 128, 0.15)
-    );
+  background-image: var(--marker-background-main);
   border-radius: 2% 1% 8% 5%;
 }
 
 h3 {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--subheading-color);
 }
 
 a {
@@ -93,22 +122,12 @@ a:focus {
   background-size: auto 0.5rem;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-    75deg,
-    rgba(255, 192, 128, 0.35),
-    rgba(255, 192, 128, 0.85),
-    rgba(255, 192, 128, 0.25)
-    );
+  background-image: var(--marker-background-main);
   border-radius: 2% 1% 2% 5%;
 }
 
 .lead strong {
-  background-image: linear-gradient(
-    75deg,
-    rgba(255, 192, 128, 0.35),
-    rgba(255, 192, 128, 0.85),
-    rgba(255, 192, 128, 0.25)
-    );
+  background-image: var(--marker-background-secondary);
   border-radius: 5% 30% 20% 40%;
 }
 
